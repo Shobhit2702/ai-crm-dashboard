@@ -16,7 +16,7 @@ export const errorHandler = (err, req, res, next) => {
     status = 'fail';
     isOperational = true;
     if (err.code === 'LIMIT_FILE_SIZE') {
-      message = 'File size is too large. Maximum limit is 50MB.';
+      message = 'File size is too large. Maximum limit is 10MB.';
     } else {
       message = `Upload error: ${err.message}`;
     }

@@ -53,7 +53,7 @@ const fileFilter = (req, file, cb) => {
 
 // Set limits
 const limits = {
-  fileSize: 50 * 1024 * 1024, // 50MB
+  fileSize: 10 * 1024 * 1024, // 10MB
   files: 1 // Only 1 file at a time
 };
 
