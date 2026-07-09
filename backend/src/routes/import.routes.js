@@ -1,6 +1,6 @@
 import express from 'express';
-import { query } from 'express-validator';
-import { uploadCSVFile } from '../controllers/import.controller.js';
+import { query, body } from 'express-validator';
+import { uploadCSVFile, mapCSVRecords } from '../controllers/import.controller.js';
 import { uploadCSV } from '../middleware/multer.js';
 import { validate } from '../middleware/validator.js';
 
@@ -21,6 +21,21 @@ router.post(
   ],
   validate,
   uploadCSVFile
+);
+
+router.post(
+  '/map',
+  [
+    body('records')
+      .isArray({ min: 1 })
+      .withMessage('records parameter must be a non-empty array of CSV rows'),
+    body('model')
+      .optional()
+      .isString()
+      .withMessage('model parameter must be a string representing the Gemini model')
+  ],
+  validate,
+  mapCSVRecords
 );
 
 export default router;

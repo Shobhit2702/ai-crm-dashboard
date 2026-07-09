@@ -1,5 +1,6 @@
 import fs from 'fs';
 import { parseCSVFile, getCSVPreview } from '../services/csv.service.js';
+import aiService from '../services/ai.service.js';
 import AppError from '../utils/AppError.js';
 
 /**
@@ -47,5 +48,29 @@ export const uploadCSVFile = async (req, res, next) => {
         }
       });
     }
+  }
+};
+
+/**
+ * Controller to handle AI-powered mapping of parsed CSV records to CRM schema
+ */
+export const mapCSVRecords = async (req, res, next) => {
+  const { records, model } = req.body;
+
+  try {
+    if (!records || !Array.isArray(records)) {
+      return next(new AppError('Missing or invalid records array in request body', 400));
+    }
+
+    const mapped = await aiService.mapCSVRecords(records, model);
+
+    res.status(200).json({
+      success: true,
+      message: 'CSV records mapped to CRM schema successfully',
+      count: mapped.length,
+      data: mapped
+    });
+  } catch (error) {
+    next(error);
   }
 };
