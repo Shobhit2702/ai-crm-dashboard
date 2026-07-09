@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { Toaster } from "react-hot-toast";
 
 function LayoutWrapper({ children }) {
   const [collapsed, setCollapsed] = useState(false);
@@ -15,6 +16,7 @@ function LayoutWrapper({ children }) {
 
   return (
     <ThemeProvider>
+      <Toaster position="top-right" toastOptions={{ className: "dark:bg-slate-900 dark:text-slate-100" }} />
       <div className="min-h-screen bg-slate-50/30 dark:bg-slate-950 font-sans antialiased text-slate-900 dark:text-slate-100 transition-colors duration-200">
         {/* Sidebar Component */}
         <Sidebar
