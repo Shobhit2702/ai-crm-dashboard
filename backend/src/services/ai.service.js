@@ -8,9 +8,11 @@ class AIService {
    * 
    * @param {Array<Object>} records - The parsed CSV records.
    * @param {string} [modelName='gemini-2.5-flash'] - The Gemini model to use.
-   * @returns {Promise<Array<Object>>} The mapped CRM records.
+   * @param {number} [batchSize=20] - Number of records per batch.
+   * @param {Function} [onProgress=null] - Callback triggered with processed count.
+   * @returns {Promise<Object>} The mapping result stats and records.
    */
-  async mapCSVRecords(records, modelName = 'gemini-2.5-flash', batchSize = 20) {
+  async mapCSVRecords(records, modelName = 'gemini-2.5-flash', batchSize = 20, onProgress = null) {
     if (!ai) {
       throw new AppError(
         'Google Gen AI client is not initialized. Please configure GEMINI_API_KEY in your .env file.',
@@ -171,6 +173,10 @@ class AIService {
           imported += batchImportedRecords.length;
           skipped += batchSkippedCount;
           finalRecords.push(...batchImportedRecords);
+        }
+
+        if (typeof onProgress === 'function') {
+          onProgress(Math.min(i + targetBatchSize, records.length));
         }
       }
 
