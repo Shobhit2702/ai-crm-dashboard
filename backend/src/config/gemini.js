@@ -17,3 +17,6 @@ if (apiKey && apiKey !== 'your_gemini_api_key_here') {
 }
 
 export { ai };
+export const setAiClient = (newAi) => {
+  ai = newAi;
+};

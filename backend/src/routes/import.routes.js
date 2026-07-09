@@ -32,7 +32,11 @@ router.post(
     body('model')
       .optional()
       .isString()
-      .withMessage('model parameter must be a string representing the Gemini model')
+      .withMessage('model parameter must be a string representing the Gemini model'),
+    body('batchSize')
+      .optional()
+      .isInt({ min: 1 })
+      .withMessage('batchSize parameter must be a positive integer')
   ],
   validate,
   mapCSVRecords

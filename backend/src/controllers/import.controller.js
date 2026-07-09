@@ -55,20 +55,23 @@ export const uploadCSVFile = async (req, res, next) => {
  * Controller to handle AI-powered mapping of parsed CSV records to CRM schema
  */
 export const mapCSVRecords = async (req, res, next) => {
-  const { records, model } = req.body;
+  const { records, model, batchSize } = req.body;
 
   try {
     if (!records || !Array.isArray(records)) {
       return next(new AppError('Missing or invalid records array in request body', 400));
     }
 
-    const mapped = await aiService.mapCSVRecords(records, model);
+    const parsedBatchSize = batchSize ? parseInt(batchSize, 10) : undefined;
+    const result = await aiService.mapCSVRecords(records, model, parsedBatchSize);
 
     res.status(200).json({
       success: true,
       message: 'CSV records mapped to CRM schema successfully',
-      count: mapped.length,
-      data: mapped
+      imported: result.imported,
+      skipped: result.skipped,
+      failed: result.failed,
+      records: result.records
     });
   } catch (error) {
     next(error);
