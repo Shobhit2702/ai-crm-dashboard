@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "totalCustomers": {
+      "value": 2450,
+      "change": "+5.4%",
+      "label": "Total Customers"
+    },
+    "newCustomers": {
+      "value": 294,
+      "change": "+12%",
+      "label": "New Customers"
+    },
+    "activeCustomers": {
+      "value": 1840,
+      "label": "Active Customers"
+    },
+    "importedRecords": {
+      "value": "15.2k",
+      "label": "Imported Records"
+    }
+  },
+  "customerGrowth": [
+    { "month": "Jan", "customers": 800, "backgroundWave": 600, "highlight": false },
+    { "month": "Feb", "customers": 1400, "backgroundWave": 1200, "highlight": false },
+    { "month": "Mar", "customers": 1750, "backgroundWave": 1600, "highlight": false },
+    { "month": "Apr", "customers": 3000, "backgroundWave": 2200, "highlight": true },
+    { "month": "May", "customers": 2200, "backgroundWave": 2000, "highlight": false },
+    { "month": "Jun", "customers": 2600, "backgroundWave": 2400, "highlight": false }
+  ],
+  "customerStatus": [
+    { "name": "Active", "value": 75, "color": "#0d9488" },
+    { "name": "Pending", "value": 15, "color": "#f59e0b" },
+    { "name": "Inactive", "value": 10, "color": "#dc2626" }
+  ],
+  "recentImports": [
+    {
+      "id": "1",
+      "filename": "Q4_Customers_Financial.csv",
+      "records": "2.4k records",
+      "time": "2 hours ago",
+      "status": "success"
+    },
+    {
+      "id": "2",
+      "filename": "Leads_Export_October.csv",
+      "records": "840 records",
+      "time": "1 day ago",
+      "status": "success"
+    },
+    {
+      "id": "3",
+      "filename": "Legacy_System_Full_Backup.csv",
+      "records": "12k records",
+      "time": "3 days ago",
+      "status": "failed"
+    }
+  ],
+  "recentCustomers": [
+    {
+      "id": "1",
+      "name": "Sarah Jenkins",
+      "company": "Global Tech Solutions",
+      "status": "Active",
+      "avatar": ""
+    },
+    {
+      "id": "2",
+      "name": "Michael Rivera",
+      "company": "Rivera & Co.",
+      "status": "Pending",
+      "avatar": ""
+    },
+    {
+      "id": "3",
+      "name": "Emily Thorne",
+      "company": "Bloom Creative",
+      "status": "Active",
+      "avatar": ""
+    },
+    {
+      "id": "4",
+      "name": "Hiroshi Tanaka",
+      "company": "Nexus Industries",
+      "status": "Active",
+      "avatar": ""
+    }
+  ],
+  "activityTimeline": [
+    {
+      "id": "1",
+      "title": "New Customer Added",
+      "description": "Sarah Jenkins was added by Alex Chen",
+      "time": "12 minutes ago",
+      "type": "add"
+    },
+    {
+      "id": "2",
+      "title": "Data Import Completed",
+      "description": "2,450 records processed successfully",
+      "time": "2 hours ago",
+      "type": "import"
+    },
+    {
+      "id": "3",
+      "title": "API Key Rotated",
+      "description": "System security update performed",
+      "time": "Yesterday at 4:30 PM",
+      "type": "security"
+    }
+  ]
+}
