@@ -1,0 +1,349 @@
+[
+  {
+    "id": "alex-rivera",
+    "name": "Alex Rivera",
+    "email": "alex.rivera@stripe.com",
+    "phone": "+1 (555) 012-3456",
+    "linkedin": "linkedin.com/in/alexrivera",
+    "company": "Stripe",
+    "jobTitle": "Senior Operations Lead",
+    "status": "Active",
+    "createdDate": "Sep 24, 2023",
+    "ltv": 24500,
+    "lastInteraction": "2d ago",
+    "lastInteractionMethod": "Via Email Support",
+    "health": 88,
+    "tags": ["Enterprise", "SaaS", "High-Value", "Q4 Lead"],
+    "recentImports": [
+      { "filename": "leads_q3_final.csv", "date": "Oct 12, 2023", "size": "4.2MB" },
+      { "filename": "stripe_sync_report.csv", "date": "Oct 08, 2023", "size": "1.8MB" }
+    ],
+    "notes": [
+      {
+        "id": "n1",
+        "content": "Alex is interested in upgrading to the Enterprise Plus tier next quarter. Needs custom SSO configuration details.",
+        "date": "2 days ago",
+        "author": "Sarah Jenkins"
+      },
+      {
+        "id": "n2",
+        "content": "Discussed pricing structure for multi-region teams. Sent documentation on region-level data residency.",
+        "date": "1 week ago",
+        "author": "Michael Chen"
+      }
+    ],
+    "history": [
+      {
+        "id": "h1",
+        "title": "Bulk CSV Import Completed",
+        "description": "System successfully processed leads_q3_final.csv. 450 new fields updated for Alex Rivera's profile.",
+        "time": "Today, 2:45 PM",
+        "date": "Jul 09, 2026",
+        "type": "system",
+        "status": "success",
+        "icon": "import"
+      },
+      {
+        "id": "h2",
+        "title": "Manual Contact Update",
+        "description": "Email address changed from alex.r@oldmail.com to alex.rivera@stripe.com.",
+        "time": "Yesterday, 10:12 AM",
+        "date": "Jul 08, 2026",
+        "type": "user",
+        "author": "Sarah Jenkins",
+        "icon": "edit"
+      },
+      {
+        "id": "h3",
+        "title": "Tag Added: \"Enterprise\"",
+        "description": "Profile categorized based on recent purchase volume and seat count (500+ users).",
+        "time": "Oct 10, 2023",
+        "date": "Oct 10, 2023",
+        "type": "tag",
+        "icon": "tag"
+      },
+      {
+        "id": "h4",
+        "title": "Account Created",
+        "description": "Initial record creation through Stripe API integration.",
+        "time": "Sep 24, 2023",
+        "date": "Sep 24, 2023",
+        "type": "system",
+        "icon": "user"
+      }
+    ],
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=256&auto=format&fit=crop"
+  },
+  {
+    "id": "jordan-smith",
+    "name": "Jordan Smith",
+    "email": "j.smith@nexus-global.com",
+    "phone": "+1 (555) 019-8765",
+    "linkedin": "linkedin.com/in/jordansmith",
+    "company": "Nexus Global",
+    "jobTitle": "VP of Sales",
+    "status": "Active",
+    "createdDate": "Oct 12, 2023",
+    "ltv": 18200,
+    "lastInteraction": "1d ago",
+    "lastInteractionMethod": "Via Phone Call",
+    "health": 92,
+    "tags": ["Enterprise", "Strategic"],
+    "recentImports": [
+      { "filename": "nexus_leads_q4.csv", "date": "Oct 15, 2023", "size": "1.2MB" }
+    ],
+    "notes": [],
+    "history": [
+      {
+        "id": "j1",
+        "title": "Account Created",
+        "description": "Initial record creation.",
+        "time": "Oct 12, 2023",
+        "date": "Oct 12, 2023",
+        "type": "system",
+        "icon": "user"
+      }
+    ],
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=256&auto=format&fit=crop"
+  },
+  {
+    "id": "sarah-jenkins",
+    "name": "Sarah Jenkins",
+    "email": "s.jenkins@vortex.io",
+    "phone": "+1 (555) 013-9876",
+    "linkedin": "linkedin.com/in/sarahjenkins",
+    "company": "Vortex Systems",
+    "jobTitle": "Product Manager",
+    "status": "Lead",
+    "createdDate": "Nov 04, 2023",
+    "ltv": 0,
+    "lastInteraction": "3d ago",
+    "lastInteractionMethod": "Via Email Support",
+    "health": 75,
+    "tags": ["SaaS", "Q4 Lead"],
+    "recentImports": [],
+    "notes": [],
+    "history": [
+      {
+        "id": "s1",
+        "title": "Account Created",
+        "description": "Initial record creation.",
+        "time": "Nov 04, 2023",
+        "date": "Nov 04, 2023",
+        "type": "system",
+        "icon": "user"
+      }
+    ],
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=256&auto=format&fit=crop"
+  },
+  {
+    "id": "michael-chen",
+    "name": "Michael Chen",
+    "email": "m.chen@lumina.tech",
+    "phone": "+1 (555) 014-4321",
+    "linkedin": "linkedin.com/in/michaelchen",
+    "company": "Lumina Tech",
+    "jobTitle": "Lead Architect",
+    "status": "Active",
+    "createdDate": "Dec 01, 2023",
+    "ltv": 15400,
+    "lastInteraction": "5d ago",
+    "lastInteractionMethod": "Via Zoom Meeting",
+    "health": 95,
+    "tags": ["Tech", "High-Value"],
+    "recentImports": [],
+    "notes": [],
+    "history": [
+      {
+        "id": "m1",
+        "title": "Account Created",
+        "description": "Initial record creation.",
+        "time": "Dec 01, 2023",
+        "date": "Dec 01, 2023",
+        "type": "system",
+        "icon": "user"
+      }
+    ],
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=256&auto=format&fit=crop"
+  },
+  {
+    "id": "elena-rodriguez",
+    "name": "Elena Rodriguez",
+    "email": "elena.r@horizon.com",
+    "phone": "+1 (555) 016-5678",
+    "linkedin": "linkedin.com/in/elenarodriguez",
+    "company": "Horizon Digital",
+    "jobTitle": "Marketing Director",
+    "status": "Inactive",
+    "createdDate": "Aug 22, 2023",
+    "ltv": 8900,
+    "lastInteraction": "2w ago",
+    "lastInteractionMethod": "Via Email Support",
+    "health": 40,
+    "tags": ["Digital", "Mid-Market"],
+    "recentImports": [],
+    "notes": [],
+    "history": [
+      {
+        "id": "e1",
+        "title": "Account Created",
+        "description": "Initial record creation.",
+        "time": "Aug 22, 2023",
+        "date": "Aug 22, 2023",
+        "type": "system",
+        "icon": "user"
+      }
+    ],
+    "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=256&auto=format&fit=crop"
+  },
+  {
+    "id": "david-thompson",
+    "name": "David Thompson",
+    "email": "d.thompson@quantum.co",
+    "phone": "+1 (555) 017-7654",
+    "linkedin": "linkedin.com/in/davidthompson",
+    "company": "Quantum Logistics",
+    "jobTitle": "Director of Supply Chain",
+    "status": "Lead",
+    "createdDate": "Jan 15, 2024",
+    "ltv": 0,
+    "lastInteraction": "1d ago",
+    "lastInteractionMethod": "Via Phone Call",
+    "health": 80,
+    "tags": ["Logistics", "Q1 Lead"],
+    "recentImports": [],
+    "notes": [],
+    "history": [
+      {
+        "id": "d1",
+        "title": "Account Created",
+        "description": "Initial record creation.",
+        "time": "Jan 15, 2024",
+        "date": "Jan 15, 2024",
+        "type": "system",
+        "icon": "user"
+      }
+    ],
+    "avatar": ""
+  },
+  {
+    "id": "robert-johnson",
+    "name": "Robert Johnson",
+    "email": "r.johnson@cyberdyne.org",
+    "phone": "+1 (555) 018-9999",
+    "linkedin": "linkedin.com/in/robertjohnson",
+    "company": "Cyberdyne Systems",
+    "jobTitle": "Chief Security Officer",
+    "status": "Active",
+    "createdDate": "Jun 11, 2023",
+    "ltv": 45000,
+    "lastInteraction": "4d ago",
+    "lastInteractionMethod": "Via Email Support",
+    "health": 98,
+    "tags": ["Enterprise", "High-Value", "Security"],
+    "recentImports": [],
+    "notes": [],
+    "history": [
+      {
+        "id": "r1",
+        "title": "Account Created",
+        "description": "Initial record creation.",
+        "time": "Jun 11, 2023",
+        "date": "Jun 11, 2023",
+        "type": "system",
+        "icon": "user"
+      }
+    ],
+    "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=256&auto=format&fit=crop"
+  },
+  {
+    "id": "lisa-wong",
+    "name": "Lisa Wong",
+    "email": "lisa.wong@oracle.com",
+    "phone": "+1 (555) 019-1111",
+    "linkedin": "linkedin.com/in/lisawong",
+    "company": "Oracle",
+    "jobTitle": "Account Manager",
+    "status": "Inactive",
+    "createdDate": "Feb 10, 2023",
+    "ltv": 32000,
+    "lastInteraction": "3w ago",
+    "lastInteractionMethod": "Via Phone Call",
+    "health": 55,
+    "tags": ["Database", "Legacy"],
+    "recentImports": [],
+    "notes": [],
+    "history": [
+      {
+        "id": "l1",
+        "title": "Account Created",
+        "description": "Initial record creation.",
+        "time": "Feb 10, 2023",
+        "date": "Feb 10, 2023",
+        "type": "system",
+        "icon": "user"
+      }
+    ],
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=256&auto=format&fit=crop"
+  },
+  {
+    "id": "emily-davis",
+    "name": "Emily Davis",
+    "email": "emily.d@canva.com",
+    "phone": "+1 (555) 021-2222",
+    "linkedin": "linkedin.com/in/emilydavis",
+    "company": "Canva",
+    "jobTitle": "Design Team Lead",
+    "status": "Active",
+    "createdDate": "Jul 05, 2023",
+    "ltv": 9800,
+    "lastInteraction": "6d ago",
+    "lastInteractionMethod": "Via In-App Chat",
+    "health": 89,
+    "tags": ["Design", "SaaS", "Growth"],
+    "recentImports": [],
+    "notes": [],
+    "history": [
+      {
+        "id": "ed1",
+        "title": "Account Created",
+        "description": "Initial record creation.",
+        "time": "Jul 05, 2023",
+        "date": "Jul 05, 2023",
+        "type": "system",
+        "icon": "user"
+      }
+    ],
+    "avatar": "https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=256&auto=format&fit=crop"
+  },
+  {
+    "id": "william-turner",
+    "name": "William Turner",
+    "email": "w.turner@blackpearl.org",
+    "phone": "+1 (555) 022-3333",
+    "linkedin": "linkedin.com/in/williamturner",
+    "company": "Black Pearl Logistics",
+    "jobTitle": "Fleet Supervisor",
+    "status": "Lead",
+    "createdDate": "May 18, 2023",
+    "ltv": 0,
+    "lastInteraction": "4d ago",
+    "lastInteractionMethod": "Via Email Support",
+    "health": 65,
+    "tags": ["Logistics", "Maritime"],
+    "recentImports": [],
+    "notes": [],
+    "history": [
+      {
+        "id": "wt1",
+        "title": "Account Created",
+        "description": "Initial record creation.",
+        "time": "May 18, 2023",
+        "date": "May 18, 2023",
+        "type": "system",
+        "icon": "user"
+      }
+    ],
+    "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=256&auto=format&fit=crop"
+  }
+]
