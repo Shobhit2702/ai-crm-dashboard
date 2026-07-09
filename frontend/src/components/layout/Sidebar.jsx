@@ -7,7 +7,6 @@ import {
   LayoutDashboard,
   Users,
   FileUp,
-  Settings,
   ChevronLeft,
   ChevronRight,
   Menu,
@@ -18,7 +17,6 @@ const NAV_ITEMS = [
   { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
   { label: "Customers", href: "/customers", icon: Users },
   { label: "CSV Import", href: "/csv-import", icon: FileUp },
-  { label: "Settings", href: "/settings", icon: Settings },
 ];
 
 function Sidebar({ collapsed, setCollapsed, mobileOpen, setMobileOpen }) {
@@ -93,27 +91,6 @@ function Sidebar({ collapsed, setCollapsed, mobileOpen, setMobileOpen }) {
         </nav>
       </div>
 
-      {/* User profile card */}
-      <div className={cn(
-        "p-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-3",
-        collapsed ? "justify-center px-2" : ""
-      )}>
-        <img
-          src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=256&auto=format&fit=crop"
-          alt="Alex Chen"
-          className="h-9 w-9 rounded-full object-cover border border-slate-200 dark:border-slate-800"
-        />
-        {!collapsed && (
-          <div className="flex flex-col min-w-0">
-            <span className="text-sm font-semibold text-slate-800 dark:text-slate-200 truncate">
-              Alex Chen
-            </span>
-            <span className="text-[11px] text-slate-400 dark:text-slate-500 truncate">
-              Admin Account
-            </span>
-          </div>
-        )}
-      </div>
     </div>
   );
 

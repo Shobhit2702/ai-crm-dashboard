@@ -1,23 +1,19 @@
 "use client";
 
-import React from "react";
-import { usePathname, useRouter } from "next/navigation";
-import { Search, Bell, HelpCircle, Menu, Moon, Sun, Settings, LogOut } from "lucide-react";
-import { Dropdown, DropdownItem, DropdownSeparator } from "@/components/ui/dropdown";
+import { usePathname } from "next/navigation";
+import { Search, Bell, HelpCircle, Menu, Moon, Sun } from "lucide-react";
 import { useTheme } from "@/context/ThemeContext";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
 function Navbar({ collapsed, setMobileOpen }) {
   const { theme, toggleTheme } = useTheme();
-  const router = useRouter();
   const pathname = usePathname();
 
   // Get active tab name for mobile header or display breadcrumbs
   const getPageTitle = () => {
     if (pathname.startsWith("/customers")) return "Customers";
     if (pathname.startsWith("/csv-import")) return "CSV Import";
-    if (pathname.startsWith("/settings")) return "Settings";
     return "Dashboard";
   };
 
@@ -50,6 +46,16 @@ function Navbar({ collapsed, setMobileOpen }) {
 
       {/* Header Actions */}
       <div className="flex items-center gap-4">
+        {/* Theme Toggle */}
+        <button
+          onClick={toggleTheme}
+          className="relative flex h-9 w-9 items-center justify-center rounded-lg text-slate-400 hover:bg-slate-50 hover:text-slate-700 dark:text-slate-500 dark:hover:bg-slate-900 dark:hover:text-slate-300 transition-colors"
+          aria-label="Toggle theme"
+        >
+          <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+        </button>
+
         {/* Help Icon */}
         <button className="flex h-9 w-9 items-center justify-center rounded-lg text-slate-400 hover:bg-slate-50 hover:text-slate-700 dark:text-slate-500 dark:hover:bg-slate-900 dark:hover:text-slate-300 transition-colors">
           <HelpCircle className="h-5 w-5" />
@@ -60,58 +66,6 @@ function Navbar({ collapsed, setMobileOpen }) {
           <Bell className="h-5 w-5" />
           <span className="absolute top-2.5 right-2.5 h-1.5 w-1.5 rounded-full bg-red-500 ring-2 ring-white dark:ring-slate-950" />
         </button>
-
-        <div className="h-5 w-px bg-slate-200 dark:bg-slate-800" />
-
-        {/* Avatar & Dropdown */}
-        <Dropdown
-          align="right"
-          trigger={
-            <div className="flex items-center gap-1 hover:opacity-90 transition-opacity">
-              <img
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=256&auto=format&fit=crop"
-                alt="Alex Chen"
-                className="h-8 w-8 cursor-pointer rounded-full object-cover border border-slate-200 dark:border-slate-800"
-              />
-            </div>
-          }
-        >
-          <div className="px-3 py-2 flex flex-col">
-            <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">
-              Alex Chen
-            </span>
-            <span className="text-xs text-slate-400 dark:text-slate-500">
-              alex.chen@crmsuite.com
-            </span>
-          </div>
-          <DropdownSeparator />
-          
-          <DropdownItem onClick={() => router.push("/settings")}>
-            <Settings className="mr-2 h-4 w-4 text-slate-400" />
-            <span>Settings</span>
-          </DropdownItem>
-          
-          <DropdownItem onClick={toggleTheme}>
-            {theme === "light" ? (
-              <>
-                <Moon className="mr-2 h-4 w-4 text-slate-400" />
-                <span>Dark Mode</span>
-              </>
-            ) : (
-              <>
-                <Sun className="mr-2 h-4 w-4 text-slate-400" />
-                <span>Light Mode</span>
-              </>
-            )}
-          </DropdownItem>
-
-          <DropdownSeparator />
-
-          <DropdownItem onClick={() => alert("Logout pressed (placeholder)")} className="text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/20">
-            <LogOut className="mr-2 h-4 w-4 text-red-500" />
-            <span>Logout</span>
-          </DropdownItem>
-        </Dropdown>
       </div>
     </header>
   );
